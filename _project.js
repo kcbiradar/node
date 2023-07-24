@@ -6,14 +6,24 @@ const fs = require("fs");
 
 http.createServer((req , res) => {
     // request
-    // index
-
     const path = req.url;
 
     if(path == "/about") {
-        console.log("This is about page");
+        // about
+
+        res.writeHead(200 , {
+            'content-type' : 'text/html'
+        });
+
+        const fileContent = fs.readFileSync("./templates/about.html");
+
+        res.write(fileContent);
+
+        res.end();
+
     } else if(path == "/") {
-        console.log("home page");
+
+        // index
         res.writeHead(200 , {
             'content-typ' : 'text/html'
         });
@@ -23,12 +33,5 @@ http.createServer((req , res) => {
         res.write(fileContent);
 
         res.end();
-    } else {
-        console.log("services");
     }
-
-
-
-    // about
-    // services
 }).listen(8082);
