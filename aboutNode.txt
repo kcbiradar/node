@@ -1,0 +1,76 @@
+Libraries(Already written code)
+
+# method to import a module
+-  const variable = require('#moduleName')
+-  for example check it in second.js
+-    
+    Example as follows
+    1. //http 
+
+    // const http = require("http")
+
+    // http.createServer((req , res) => {
+    //     // req : request process
+    //     // resp : for writing response
+
+    //     res.writeHead(200 , {"content-type" : "text/html"});
+
+    //     res.write("<h1>This is response from the first serverr </h1>");
+    //     res.write("<button>click Me </button>");
+    //     res.end()// no more request is processed
+    // }).listen(9898);
+    2. // url
+    //  const http = require('http');
+
+    //  const url = require('url');
+
+    //    http.createServer((req , res) => {
+    //        console.log(req.url);
+    //        const urlOb = url.parse(req.url);
+    //        console.log(urlOb);
+    //    }).listen(8082);
+
+
+# operations on file with example code
+-   // const fs = require("fs");
+
+    //readFile
+
+    // fs.readFile("./modules.txt" , (err , data) => {
+    //     if(err) {
+    //         console.log("error");
+    //         console.log(err);
+    //     } else {
+    //         console.log(data.toString());
+    //     }
+    // });
+
+    // console.log("terminated");
+
+    //wrriteFile
+
+    // let content = "LiveLifeLoveLong";
+
+    // fs.writeFile("new_file.txt" , content , (err) => {
+    //     if(err) {
+    //         console.log(err);
+    //     } else {
+    //         console.log("done!!!");
+    //     }
+    // });
+
+    // //appendFile
+
+    // fs.appendFile("new_file.txt" , "new content" , (err) => {
+    //     if(err) {
+    //         console.log("error " + err);
+    //     } else {
+    //         console.log('done');
+    //     }
+    // });
+
+    //deleteFile
+
+    // fs.unlink("filename" , (err) => {
+
+    // });
